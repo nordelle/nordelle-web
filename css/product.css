@@ -9,6 +9,48 @@
   --heading-font: "Aboreto", serif;
   --body-font: "Inter", sans-serif;
 }
+
+.page-shell {
+  width: min(1240px, calc(100% - 46px));
+  margin: 0 auto;
+  padding: 32px 0 88px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 48px;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.92rem;
+}
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.72);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link.is-active {
+  color: #6a6a6a;
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.nav-link.is-active.nav-link-no-underline::after {
+  content: none;
+  display: none;
+}
 /* ------------- Mobile ------------- */
 /* --- Breadcrumbs (lille menu ting øverst til venstre) --- */
 .breadcrumb {
@@ -394,5 +436,29 @@ summary {
 
   .review h4 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    width: min(calc(100% - 32px), 760px);
+    padding-top: 34px;
+  }
+
+  .top-nav {
+    margin-bottom: 42px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(calc(100% - 24px), 540px);
+    padding-bottom: 44px;
+  }
+
+  .top-nav {
+    gap: 18px;
+    margin-bottom: 26px;
+    font-size: 0.78rem;
   }
 }
