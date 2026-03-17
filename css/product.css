@@ -61,22 +61,35 @@ p {
 
 /* ------------- Mobile ------------- */
 /* --- Breadcrumbs (lille menu ting øverst til venstre) --- */
-.breadcrumb {
+.top-nav {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 48px;
+  font-family: aboreto;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.92rem;
 }
-.breadcrumb a {
-  color: var(--text-color);
-  font-family: var(--body-font);
-  font-size: 0.8rem;
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.72);
   text-decoration: none;
-  color: black;
+  position: relative;
 }
-.breadcrumb span {
-  color: var(--primary-color);
-  font-family: var(--body-font);
-  font-size: 0.8rem;
+
+.nav-link.is-active {
+  color: #6a6a6a;
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
 }
 /* --- Produkt boksen --- */
 .product-box {
@@ -105,7 +118,7 @@ p {
 }
 /* Pris */
 .price {
-  font-family: var(--heading-font);
+  font-family: aboreto;
   font-size: 1.25rem;
   margin-top: 1px;
   margin-right: 1px;
