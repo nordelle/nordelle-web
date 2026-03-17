@@ -26,3 +26,67 @@ body > * {
   margin-left: auto;
   margin-right: auto;
 }
+/* ------------- Reset ------------- */
+
+/* Sørger for at padding og border tælles med i elementets bredde/højde */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fjerner browserens standard margin og padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Forbedrer læsbarheden af tekst */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gør billeder og medier responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Sikrer at formularfelter arver font fra body */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Forhindrer tekst i at flyde ud over containeren */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Gør brødtekst mere læsevenlig */
+p {
+  text-wrap: pretty;
+}
+
+/* Balancerer linjebrud i overskrifter */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
