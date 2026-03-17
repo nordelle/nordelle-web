@@ -1,4 +1,4 @@
-Variables.css :root {
+:root {
   /* Farver */
   --primary-color: #c56b6b;
   --secondary-color: #777;
@@ -9,62 +9,13 @@ Variables.css :root {
   --heading-font: "Aboreto", serif;
   --body-font: "Inter", sans-serif;
 }
-/* ------------- Generelle fonte ------------- */
-/* COCO */
-h1 {
-  font-family: var(--heading-font);
-  font-size: 1.8rem;
-  color: var(--text-color);
-  letter-spacing: 2px;
-}
-/*  MADEMOISELLE - ANDMELDELSER*/
-h2 {
-  font-family: var(--heading-font);
-  font-size: 1.6rem;
-  color: var(--text-color);
-  letter-spacing: 2px;
-}
-/* Description + Specifications + Delivery & Returns */
-h3 {
-  font-family: var(--heading-font);
-  font-size: 1rem;
-  color: var(--text-color);
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-/* Normal brødtekst */
-p {
-  font-family: var(--body-font);
-  font-size: 0.95rem;
-  color: var(--secondary-color);
-  line-height: 1.6;
-}
-
-/* ------------- Desktop størrelse ------------- */
-@media (min-width: 1000px) {
-  h1 {
-    font-size: 2.6rem;
-    margin-bottom: 0px;
-  }
-  h2 {
-    font-size: 2.4rem;
-    margin-bottom: 4px;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1.3rem;
-  }
-}
-
 /* ------------- Mobile ------------- */
 /* --- Breadcrumbs (lille menu ting øverst til venstre) --- */
 .breadcrumb {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 .breadcrumb a {
   color: var(--text-color);
@@ -83,25 +34,44 @@ p {
   border: 1px solid #c56b6b;
   padding: 30px;
   background: white;
+  margin: 0 16px;
+  margin-bottom: 20px;
 }
 /* --- img af parfumen --- */
 .product-img {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 .product-img img {
   width: 220px;
+  display: block;
+  margin: 30px auto;
+}
+.h1-coco {
+  font-family: var(--heading-font);
+  font-size: 1.7rem;
+  color: var(--text-color);
+  letter-spacing: 2px;
 }
 /* Title */
 .title-row {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
 }
-/* MADEMOISELLE*/
-.title-row h2 {
+.h2-product,
+.reviews-title {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
   color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+/* Normal brødtekst */
+.description-text {
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
 }
 /* Pris */
 .price {
@@ -201,8 +171,15 @@ p {
 }
 /* --- Specifikation og levering --- */
 /* mellemrum op til boks */
+.h3-title {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
 .spec-box {
-  margin-top: 20px;
+  margin: 0 30px;
 }
 summary {
   font-family: var(--heading-font);
@@ -247,6 +224,7 @@ summary {
   border: 2px solid #c56b6b;
   padding: 20px;
   border-radius: 25px;
+  margin: 0 16px;
 }
 
 .review {
@@ -254,9 +232,8 @@ summary {
 }
 .reviews-title {
   color: var(--primary-color);
-  margin-top: 40px;
-  margin-bottom: 15px;
   letter-spacing: 3px;
+  margin: 40px 0px 10px 20px;
 }
 /* Font */
 .review h4 {
@@ -269,108 +246,108 @@ summary {
 }
 /* --- DESKTOP --- */
 
+/* --- DESKTOP --- */
+
 @media (min-width: 1000px) {
   /* --- Breadcrumbs --- */
+  .breadcrumb {
+    margin-left: 100px;
+  }
   .breadcrumb a {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .breadcrumb span {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
-  /* --- Produkt boksen --- */
+  /* --- PRODUKT BOKSEN (med info)  --- */
 
   .product-layout {
     display: grid;
-    grid-template-columns: 450px 600px;
-    gap: 200px;
-    max-width: 1100px;
+    grid-template-columns: 350px 400px;
+    gap: 90px;
+    max-width: 900px;
     margin: auto;
+    margin-top: 50px;
     align-items: start;
   }
+
   .product-box {
-    min-height: 600px;
+    padding: 20px;
+    min-height: auto;
   }
+
   .product-img {
     text-align: left;
   }
+
   .product-img img {
     width: 450px;
+    margin: 0px auto;
   }
-  .product-right {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+
+  .h1-coco {
+    font-size: 2rem;
   }
-  /* Pris*/
+
+  .h2-product {
+    font-size: 1.5rem;
+  }
+
+  .h3-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .description-text {
+    font-size: 0.9rem;
+  }
+
+  /* Pris */
   .price {
-    font-size: 1.9rem;
-    margin-top: 0px;
+    font-size: 1.5rem;
   }
+
   /* Eau de Parfum Spray */
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
+
   /* Font & +/- */
   .qty-controls button,
   .qty-label,
   .qty-controls,
   .stock,
   .add-to-bag {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
   }
-  /* --- Hjerte boksen --- */
+
+  /* Hjerte */
   .wishlist {
-    font-size: 60px;
-    height: 90px;
+    font-size: 30px;
+    height: 60px;
   }
-  /* --- Specifikation og levering --- */
-  .spec-box {
-    margin-top: 10px;
+
+  /* ADD ROW */
+  .add-row {
+    border: 2.5px solid #c56b6b;
+    grid-template-columns: 1fr 60px;
   }
-  summary {
-    font-size: 1.8rem;
+
+  .add-to-bag {
+    padding: 12px;
+    letter-spacing: 2px;
   }
-  /* Punkterne under specifikationer & levering */
-  li {
-    font-size: 1.2rem;
-  }
-  /* title */
-  .spec-title {
-    font-size: 1.4rem;
-  }
-  /* --- Anmeldelser --- */
-  .reviews {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 2000px;
-    margin: 0 auto;
-    padding: 50px 80px;
-  }
-  .reviews-title {
-    max-width: 1970px;
-    margin: 40px auto 15px auto;
-  }
-  .review {
-    margin-top: 0;
-    text-align: center;
-  }
-  .review h4 {
-    font-size: 1.6rem;
-  }
-  /* --- Border --- */
+
+  /* Border i boksen */
   .product-box {
     border: 2.5px solid #c56b6b;
   }
 
-  .add-row {
-    border: 2.5px solid #c56b6b;
-  }
   .divider {
     height: 2px;
     background: #c56b6b;
   }
+
   .purchase-box {
     border-top: 2.5px solid #c56b6b;
     border-bottom: 0px solid #c56b6b;
@@ -379,9 +356,43 @@ summary {
   .add-to-bag,
   .qty-box {
     border-right: 2.5px solid #c56b6b;
+    padding: 15px;
   }
 
-  .qty-box {
-    padding: 40px;
+  /* Specifikation */
+  .spec-box {
+    margin-top: 10px;
+  }
+
+  li {
+    font-size: 0.8rem;
+  }
+
+  .spec-title {
+    font-size: 1rem;
+  }
+
+  /* Reviews */
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .reviews-title {
+    max-width: 1450px;
+    margin: 20px auto 10px auto;
+  }
+
+  .review {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .review h4 {
+    font-size: 1rem;
   }
 }
