@@ -320,12 +320,16 @@ summary {
   }
 
   .product-img {
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .product-img img {
-    width: 450px;
-    margin: 0px auto;
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    object-fit: contain;
   }
 
   .h1-coco {
