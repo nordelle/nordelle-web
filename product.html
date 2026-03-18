@@ -51,41 +51,48 @@
         </nav>
       </div>
     </aside>
+
     <main class="page-shell">
+      <!-- NAV -->
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="index.html" class="nav-link">Products</a>
-        <a href="parfumer.html" class="nav-link is-active nav-link-no-underline"
-          >Parfumes</a
-        >
-        <a href="product.html" class="nav-link is-active">COCO MADEMOISELLE </a>
+
+        <a
+          href="#"
+          class="nav-link is-active nav-link-no-underline category-link"
+        ></a>
+
+        <a href="#" class="nav-link is-active current-product"></a>
       </nav>
-      <!-- Produkt billede -->
+      <!-- PRODUKT -->
       <section class="product-layout">
+        <!-- BILLEDE -->
         <div class="product-img">
-          <img src="billeder/coco.webp" alt="Coco Mademoiselle" />
+          <img src="" alt="" class="product-image" />
         </div>
-        <!-- Info boks -->
+
+        <!-- INFO -->
         <div class="product-right">
           <section class="product-box">
             <div class="title-row">
               <div>
-                <h1 class="h1-coco">COCO</h1>
-                <h2 class="h2-product">MADEMOISELLE</h2>
+                <h1 class="h1-coco title-main"></h1>
+                <h2 class="h2-product title-sub"></h2>
               </div>
 
-              <div class="price">975DKK</div>
+              <div class="price product-price"></div>
             </div>
 
             <p class="subtitle">Eau de Parfum Spray</p>
+
+            <!-- BRAND -->
+            <p class="product-brand"></p>
 
             <div class="divider"></div>
 
             <h3 class="h3-title">Description</h3>
 
-            <p class="description-text">
-              An elegant and mysterious fragrance with notes of grapefruit,
-              rose, and sandalwood. Perfect for evening wear.
-            </p>
+            <p class="description-text product-description"></p>
 
             <div class="purchase-box">
               <div class="qty-box">
@@ -98,7 +105,7 @@
                 </div>
               </div>
 
-              <div class="stock">Stock: 58</div>
+              <div class="stock product-stock"></div>
             </div>
 
             <div class="add-row">
@@ -106,61 +113,57 @@
               <div class="wishlist">♡</div>
             </div>
           </section>
-          <!-- Specifications / Delivery & Returns -->
 
+          <!-- SPECIFICATIONS -->
           <section class="spec-box">
             <details>
               <summary class="h3-title">Specifications</summary>
+
               <h4 class="spec-title">Product Information</h4>
               <ul>
-                <li><strong>Brand:</strong> Chanel</li>
-                <li><strong>Barcode:</strong> 4091737746820</li>
-                <li><strong>SKU:</strong> FRA-CHA-CHA-007</li>
-                <li><strong>Minimum Order Quantity:</strong> 1</li>
+                <li><strong>Brand:</strong> <span class="brand"></span></li>
+                <li><strong>Barcode:</strong> <span class="barcode"></span></li>
+                <li><strong>SKU:</strong> <span class="sku"></span></li>
+                <li>
+                  <strong>Minimum Order Quantity:</strong>
+                  <span class="minimum"></span>
+                </li>
               </ul>
 
-              <h4 class="spec-title">Product Dimensions</h4>
+              <h4 class="title">Product Dimensions</h4>
               <ul>
-                <li><strong>Weight:</strong> 7</li>
-                <li><strong>Width:</strong> 24.5</li>
-                <li><strong>Height:</strong> 25.7</li>
-                <li><strong>Depth:</strong> 25.98</li>
+                <li><strong>Weight:</strong> <span class="weight"></span></li>
+                <li><strong>Width:</strong> <span class="width"></span></li>
+                <li><strong>Height:</strong> <span class="height"></span></li>
+                <li><strong>Depth:</strong> <span class="depth"></span></li>
               </ul>
             </details>
 
             <details>
               <summary class="h3-title">Delivery & Returns</summary>
               <ul>
-                <li><strong>Warranty Information:</strong> 3 year warranty</li>
-                <li><strong>Shipping Information:</strong> Ships overnight</li>
-                <li><strong>Return Policy:</strong> No return policy</li>
+                <li>
+                  <strong>Warranty Information:</strong>
+                  <span class="warranty"></span>
+                </li>
+                <li>
+                  <strong>Shipping Information:</strong>
+                  <span class="shipping"></span>
+                </li>
+                <li>
+                  <strong>Return Policy:</strong>
+                  <span class="return"></span>
+                </li>
               </ul>
             </details>
           </section>
         </div>
       </section>
-      <!-- Reviews -->
+
+      <!-- REVIEWS -->
       <h2 class="reviews-title">Reviews</h2>
 
-      <section class="reviews">
-        <article class="review">
-          <h4>Ruby Andrews</h4>
-
-          <p>"Highly impressed!"</p>
-        </article>
-
-        <article class="review">
-          <h4>Leah Henderson</h4>
-
-          <p>"Awesome product!"</p>
-        </article>
-
-        <article class="review">
-          <h4>Xavier Wright</h4>
-
-          <p>"Very happy with my purchase!"</p>
-        </article>
-      </section>
+      <section class="reviews"></section>
     </main>
     <!-- Footer -->
     <footer class="site-footer">
@@ -207,5 +210,6 @@
       <div class="footer-brand">NORDELLE</div>
     </footer>
     <script src="menu.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>
