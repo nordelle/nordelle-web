@@ -49,7 +49,7 @@ function showProducts(products) {
       cardClass += " product-card--sale";
     }
 
-    // 🔹 laver html for hvert produkt
+    // laver html for hvert produkt
     markup += `
       <article class="${cardClass}">
 
