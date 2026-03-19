@@ -130,8 +130,8 @@ img {
   padding: 0 4px;
 }
 .image-frame:hover {
-  border-right: 3px solid var(--accent);
-  border-bottom: 3px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 .product-image {
