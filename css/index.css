@@ -493,18 +493,11 @@ body.menu-open .site-menu {
 /* Slider line */
 .slider-line {
   max-width: 1560px;
-  height: 4px;
-  background: #d7c2c2;
+  height: 3px;
+  background: var(--rose-dark);
   margin: 18px auto 16px;
   border-radius: 999px;
   overflow: hidden;
-}
-
-.slider-progress {
-  width: 48%;
-  height: 100%;
-  background: var(--rose-dark);
-  border-radius: 999px;
 }
 
 /* Show all */
